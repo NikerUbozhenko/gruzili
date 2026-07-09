@@ -38,24 +38,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Верхняя полоса с текстом */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-4 mb-8 text-sm md:text-base"
-          >
-            <div className="flex items-center gap-2 text-yellow-500">
-              <div className="w-8 h-px bg-yellow-500" />
-              <span className="font-semibold tracking-wider">ГОМЕЛЬ И ОБЛАСТЬ</span>
-            </div>
-            <span className="text-gray-500">•</span>
-            <div className="flex items-center gap-2 text-yellow-500">
-              <span className="font-semibold tracking-wider">РАБОТАЕМ ЕЖЕДНЕВНО</span>
-              <div className="w-8 h-px bg-yellow-500" />
-            </div>
-          </motion.div>
-
           {/* Главный заголовок */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -64,9 +46,8 @@ const Hero = () => {
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-manrope leading-none">
-              <div className="text-white mb-2">ГРУЗИМ.</div>
-              <div className="text-white mb-2">ВЕЗЁМ.</div>
-              <div className="text-yellow-500">РАСЧИЩАЕМ.</div>
+              <div className="text-white mb-2">ГРУЗИМ ВЕЗЁМ</div>
+              <div className="text-yellow-500">ЛОМАЕМ ЧИСТИМ</div>
             </h1>
           </motion.div>
 
