@@ -1,33 +1,52 @@
-import { BrowserRouter as Router } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
-import Prices from './components/Prices'
+import PhotoGallery from './components/PhotoGallery'
 import Advantages from './components/Advantages'
-import Stats from './components/Stats'
+import Prices from './components/Prices'
 import Reviews from './components/Reviews'
-import MapSection from './components/MapSection'
 import CTA from './components/CTA'
+import MapSection from './components/MapSection'
 import Footer from './components/Footer'
 import FloatingButtons from './components/FloatingButtons'
 
 function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-primary text-white overflow-x-hidden">
-        <Header />
-        <Hero />
-        <Services />
-        <Prices />
-        <Advantages />
-        <Stats />
-        <Reviews />
-        <MapSection />
-        <CTA />
-        <Footer />
-        <FloatingButtons />
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Simulate loading
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-primary flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-accent border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-accent font-semibold">Загрузка...</p>
+        </div>
       </div>
-    </Router>
+    )
+  }
+
+  return (
+    <div className="relative bg-primary text-white overflow-x-hidden">
+      <Header />
+      <Hero />
+      <Services />
+      <PhotoGallery />
+      <Advantages />
+      <Prices />
+      <Reviews />
+      <CTA />
+      <MapSection />
+      <Footer />
+      <FloatingButtons />
+    </div>
   )
 }
 

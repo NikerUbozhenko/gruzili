@@ -22,7 +22,7 @@ const MapSection = () => {
           <div className="bg-primary/50 backdrop-blur-md border border-white/10 rounded-xl p-6 text-center">
             <MapPin className="w-10 h-10 text-accent mx-auto mb-3" />
             <h3 className="font-bold mb-2">Адрес</h3>
-            <p className="text-gray-400">г. Гомель, ул. Советская, 1</p>
+            <p className="text-gray-400">Гомель, ул. Григория Денисенко, 76</p>
           </div>
           
           <div className="bg-primary/50 backdrop-blur-md border border-white/10 rounded-xl p-6 text-center">
@@ -46,25 +46,16 @@ const MapSection = () => {
           className="rounded-xl overflow-hidden border-2 border-white/10 shadow-2xl"
         >
           <iframe
-            src="https://yandex.by/map-widget/v1/-/CDU~5b~"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Карта Гомеля"
-          />
+          src="https://yandex.by/map-widget/v1/?ll=31.012345%2C52.434567&z=16&text=Гомель,Григория+Денисенко+76"
+          width="100%"
+          height="500"
+          allowFullScreen={true}
+          className="border-0 rounded-2xl shadow-2xl"
+          title="Карта проезда"
+        />
         </motion.div>
 
-        {/* Service areas */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center"
-        >
-        </motion.div>
+        
       </div>
     </section>
   )
