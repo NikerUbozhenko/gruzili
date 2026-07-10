@@ -3,8 +3,8 @@ import { Phone, Send, MessageCircle } from 'lucide-react'
 
 const buttons = [
   { icon: Phone, href: 'tel:+375295990782', color: 'bg-green-500', label: 'Позвонить' },
-  { icon: Send, href: 'https://t.me/gruziligomel', color: 'bg-blue-500', label: 'Telegram' },
-  { icon: MessageCircle, href: 'https://wa.me/375291234567', color: 'bg-green-600', label: 'WhatsApp' },
+  { icon: Send, href: 'https://t.me/michaniag', color: 'bg-blue-500', label: 'Telegram' },
+  { icon: MessageCircle, href: 'https://wa.me/375295990782', color: 'bg-green-600', label: 'WhatsApp' },
 ]
 
 const FloatingButtons = () => {
